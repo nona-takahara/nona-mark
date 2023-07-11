@@ -1,0 +1,29 @@
+{
+  "name": "@nona-takahara/nona-mark",
+  "version": "0.1.0",
+  "description": "A less strict markup language. Markdown dialect of Nona powered by remark",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nona-takahara/nona-mark.git"
+  },
+  "author": "Nona Takahara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nona-takahara/nona-mark/issues"
+  },
+  "homepage": "https://github.com/nona-takahara/nona-mark#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "devDependencies": {
+    "@types/node": "^12.20.55",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.44.0",
+    "typescript": "^5.1.6"
+  }
+}
