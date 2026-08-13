@@ -29,12 +29,13 @@
     "node": ">=24"
   },
   "scripts": {
-    "build": "tsc --build --force",
-    "clean": "tsc --build --clean",
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc -p tsconfig.json",
     "check:package": "publint --strict && attw --pack . --profile esm-only",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
@@ -70,9 +71,12 @@
     "eslint": "^10.8.1",
     "mdast-util-to-hast": "^13.2.1",
     "publint": "^0.3.23",
+    "rehype-stringify": "^10.0.1",
     "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
     "remark-stringify": "^11.0.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.67.0"
+    "typescript-eslint": "^8.67.0",
+    "vitest": "^4.1.10"
   }
 }
